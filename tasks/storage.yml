@@ -6,10 +6,7 @@
 
 - name: Ensure ZFS is installed.
   ansible.builtin.apt:
-    name:
-      - raspberrypi-kernel-headers
-      - zfs-dkms
-      - zfsutils-linux
+    name: zfs-dkms
     state: present
 
 - name: Configure ZFS mirror pool.

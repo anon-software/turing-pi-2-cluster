@@ -72,7 +72,6 @@
       package:
         name:
           - python3-pip
-          - python3-setuptools
           - build-essential
           - golang
           - git
@@ -82,7 +81,7 @@
     - name: Ensure required Python libraries are installed.
       pip:
         name:
-          - openshift
+          - kubernetes
           - pyyaml
         state: present
       become: true

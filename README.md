@@ -17,6 +17,7 @@ You might also be interested in another Raspberry-Pi cluster I've maintained for
 ### Raspberry Pi Setup
 
 I am running Raspberry Pi OS (64-bit, lite) on a set of four Raspberry Pi Compute Module 4s with 8GB of RAM and no built-in eMMC. I am using [32 GB SanDisk Extreme microSD cards](https://amzn.to/3G35QbY) to boot each node.
+1GB of memory that Raspberry PI 3 offers is not sufficent to act as the control plane node. You may be able to get by with Rasperry PI 4 with 2GB though.
 
 I flashed Raspberry Pi OS to the Pis using Raspberry Pi Imager.
 
