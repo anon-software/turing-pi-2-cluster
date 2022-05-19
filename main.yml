@@ -12,6 +12,14 @@
     - config.yml
 
   tasks:
+    # Add Backport repository to enable zfs-dkms package for the latest kernel.
+    # We may not need this in future when the stable repository is updated.
+    - name: Enable bullseye-backports
+      ansible.builtin.apt_repository:
+        repo: deb http://deb.debian.org/debian bullseye-backports main contrib non-free
+        state: present
+        filename: bullseye-backports
+
     - name: Ensure cgroups are configured correctly in cmdline.txt.
       ansible.builtin.replace:
         path: /boot/cmdline.txt

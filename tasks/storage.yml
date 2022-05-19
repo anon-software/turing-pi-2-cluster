@@ -4,9 +4,10 @@
     name: raspberrypi-kernel-headers
     state: present
 
-- name: Ensure ZFS is installed.
+- name: Ensure ZFS is installed - recompiling the kernel module may take a while.
   ansible.builtin.apt:
     name: zfs-dkms
+    default_release: bullseye-backports
     state: present
 
 - name: Configure ZFS pool.
