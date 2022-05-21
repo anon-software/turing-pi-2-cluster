@@ -8,6 +8,12 @@ reverse_tunnel_vps_hostname: my-vps-hostname
 storage_configure: true
 storage_pool_name: zfsdata
 storage_nfs_share_name: nfsshare
+# If only one drive is available, use it as a virtual device
+#storage_group:
+#storage_vdevs: /dev/sda
+# With two drives, a mirror configuration is possible
+storage_group: mirror
+storage_vdevs: /dev/sda /dev/sdb
 
 drupal_image: drupal:9.3-apache
 drupal_hash_salt: OTk4MTYzYWI4N2E2MGIxNjlmYmQ2MTA4

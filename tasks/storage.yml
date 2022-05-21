@@ -9,8 +9,8 @@
     name: zfs-dkms
     state: present
 
-- name: Configure ZFS mirror pool.
-  ansible.builtin.command: "zpool create {{ storage_pool_name }} mirror /dev/sda /dev/sdb"
+- name: Configure ZFS pool.
+  ansible.builtin.command: "zpool create {{ storage_pool_name }} {{ storage_group }} {{ storage_vdevs }}"
   args:
     creates: "/{{ storage_pool_name }}"
 
